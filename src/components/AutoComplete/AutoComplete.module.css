@@ -1,0 +1,25 @@
+.searchBox {
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 19rem;
+}
+
+.input {
+  width: 14rem;
+  font-size: 1.4rem;
+  border: 0;
+  outline: none;
+  margin: auto;
+  margin-left: 1rem;
+}
+
+.searchIcon::after {
+  content: '\1F50D';
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

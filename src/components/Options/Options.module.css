@@ -1,0 +1,39 @@
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  max-width: 19rem;
+  list-style: none;
+  margin-top: 0.2rem;
+  border: 1px solid #ddd;
+  border-radius: 0 0 5px 5px;
+  overflow: auto;
+  max-height: 30rem;
+  padding: 0;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  padding-left: 0.5rem;
+}
+
+.optionItem:hover {
+  transition: 0.2s all;
+  background-color: #ffcb0545;
+  cursor: pointer;
+}
+
+.optionItem img {
+  width: 4rem;
+}
+
+.optionActive {
+  background-color: #ffcb0545;
+}

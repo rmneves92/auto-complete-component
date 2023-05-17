@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { AutoComplete } from './components/AutoComplete/AutoComplete';
 import { Pokemon, PokemonResponse, PokemonResults } from './types';
@@ -7,6 +7,7 @@ const TOTAL = 50;
 
 function App() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+
   useEffect(() => {
     getPokemons();
   }, []);
@@ -17,7 +18,7 @@ function App() {
     return id;
   };
 
-  const getPokemons = useCallback(() => {
+  const getPokemons = () => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${TOTAL}`)
       .then((res) => res.json())
       .then((data: PokemonResponse) => {
@@ -33,7 +34,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  };
 
   return (
     <div className="App">
